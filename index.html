@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Rubik:wght@500&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -20,6 +21,7 @@
   </header>
 
   <main>
+    <!-- 1-2. Hero and calculator card -->
     <section class="hero wrap">
       <div class="hero-text">
         <h1>אנחנו בכלל יכולים לקנות דירה?</h1>
@@ -66,8 +68,260 @@
         <button type="button" class="btn-calc">לראות טווח מחירים</button>
       </form>
     </section>
+
+    <!-- Bridge sentence (loop). The result panel and CTA (1) go above it in stage 7. -->
+    <div class="bridge wrap">
+      <p>יש שלושה דברים שהמחשבון לא יודע עליכם, והבנק ישאל על כולם.</p>
+      <i class="ti ti-arrow-down" aria-hidden="true"></i>
+    </div>
+
+    <!-- 3. What the bank checks -->
+    <section class="section wrap" aria-labelledby="bank-title">
+      <h2 id="bank-title">שלושה דברים שהבנק בודק והמחשבון לא</h2>
+      <ol class="bank-cards">
+        <li class="card bank-card">
+          <div class="bank-card-top" aria-hidden="true">
+            <span class="big-num">1</span>
+            <i class="ti ti-file-percent"></i>
+          </div>
+          <h3>הלוואות שכבר יש לכם</h3>
+          <p>קודם כול, הבנק בודק אילו הלוואות כבר יש לכם. החזר חודשי על הלוואה ארוכה, למשל על רכב, יורד מההכנסה שהבנק מחשב לכם, ואז יורד גם הסכום שהוא מוכן להלוות.</p>
+        </li>
+        <li class="card bank-card">
+          <div class="bank-card-top" aria-hidden="true">
+            <span class="big-num">2</span>
+            <i class="ti ti-file-invoice"></i>
+          </div>
+          <h3>איזו הכנסה הבנק סופר</h3>
+          <p>הבנק גם לא סופר כל הכנסה באותה צורה. משכורת קבועה הוא סופר כולה, ואת הבונוסים, השעות הנוספות וההכנסה של עצמאי הוא מחשב אחרת.</p>
+        </li>
+        <li class="card bank-card">
+          <div class="bank-card-top" aria-hidden="true">
+            <span class="big-num">3</span>
+            <i class="ti ti-receipt"></i>
+          </div>
+          <h3>ההוצאות של הקנייה</h3>
+          <p>ונשארות ההוצאות של הקנייה עצמה, כמו עורך דין, תיווך ולפעמים מס רכישה. את ההוצאות האלה המשכנתא לא מכסה, אז צריך להביא אותן מהבית, בנוסף להון העצמי.</p>
+        </li>
+      </ol>
+      <p class="section-close">בשיחה הראשונה אני עובר איתכם על שלושת הדברים האלה. עדיף לעשות את זה לפני שמתחילים לראות דירות, כי אז אתם יודעים מראש עד איזה מחיר להסתכל.</p>
+    </section>
+
+    <!-- 4. How it works: timeline of four steps -->
+    <section class="section section-steps wrap" aria-labelledby="steps-title">
+      <h2 id="steps-title">את הטפסים ואת הטלפונים לבנקים אני לוקח על עצמי</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <figure class="step-media">
+            <div class="ph ph-step" aria-hidden="true"><i class="ti ti-photo"></i></div>
+            <figcaption>תמונה להמחשה</figcaption>
+          </figure>
+          <p class="step-text">מתחילים בשיחה של חצי שעה בערך. בשיחה הזאת בעיקר אני שואל ואתם מספרים: אם כבר יש דירה, ומה אמרו לכם בבנק עד עכשיו.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <figure class="step-media">
+            <div class="ph ph-step" aria-hidden="true"><i class="ti ti-photo"></i></div>
+            <figcaption>תמונה להמחשה</figcaption>
+          </figure>
+          <p class="step-text">משם אני לוקח על עצמי את הטפסים ואת הטלפונים לבנקים, ומעדכן אתכם כל פעם שמשהו זז.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <figure class="step-media">
+            <div class="ph ph-step" aria-hidden="true"><i class="ti ti-photo"></i></div>
+            <figcaption>תמונה להמחשה</figcaption>
+          </figure>
+          <p class="step-text">כשמגיעות הצעות, אנחנו יושבים עליהן ביחד ואני מסביר כל שורה, כולל כמה היא תעלה לכם בכל חודש. את השפה של הבנק אתם לא צריכים ללמוד.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <figure class="step-media">
+            <div class="ph ph-step" aria-hidden="true"><i class="ti ti-photo"></i></div>
+            <figcaption>תמונה להמחשה</figcaption>
+          </figure>
+          <p class="step-text">אתם בוחרים הצעה רק אחרי שברור לכם על מה אתם חותמים.</p>
+        </li>
+      </ol>
+
+      <div class="card date-box">
+        <div class="date-box-text">
+          <i class="ti ti-calendar-event" aria-hidden="true"></i>
+          <p>כשתאריך החתימה כבר קרוב, אני פונה לכמה בנקים במקביל, כדי שההצעות יגיעו בערך באותו זמן ויהיה אפשר להשוות ביניהן. עד 2019 עבדתי שבע שנים כבנקאי משכנתאות, וראיתי שם הרבה תיקים שנתקעו בגלל מסמך אחד שחסר. לכן התיק שלכם יוצא לבנקים שלם, וברוב המקרים אתם מגיעים לבנק רק בשביל לחתום.</p>
+        </div>
+        <figure class="cert">
+          <div class="ph ph-cert" aria-hidden="true"><i class="ti ti-certificate"></i></div>
+          <figcaption>תמונה להמחשה</figcaption>
+        </figure>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn-cta" href="#contact">להשאיר פרטים לשיחה בחינם</a>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials (illustrative) -->
+    <section class="section wrap" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">ככה זה נראה מהצד של הזוג</h2>
+      <p class="section-note">המלצות להמחשה. הזוגות לא אמיתיים.</p>
+      <ul class="reviews">
+        <li class="card review">
+          <i class="ti ti-quote review-mark" aria-hidden="true"></i>
+          <blockquote>
+            <p>הגענו לדניאל עוד לפני שהתחלנו לחפש, רק כדי להבין אם יש לנו בכלל על מה לדבר. הוא עבר איתנו על המספרים, שאל על ההלוואה של האוטו שלא חשבנו שהיא קשורה, ובסוף השיחה ידענו עד איזה מחיר להסתכל. חיפשנו כמה חודשים, ולא קרה לנו אף פעם שהתאהבנו בדירה ואז גילינו שהיא גדולה עלינו.</p>
+          </blockquote>
+          <div class="review-footer">
+            <figure class="review-photo">
+              <div class="ph ph-avatar" aria-hidden="true"><i class="ti ti-user"></i></div>
+              <figcaption>תמונה להמחשה</figcaption>
+            </figure>
+            <p class="review-sign"><strong>נועה ואיתי ב.</strong>, רחובות · <span class="nowrap">המלצה להמחשה</span></p>
+          </div>
+        </li>
+        <li class="card review">
+          <i class="ti ti-quote review-mark" aria-hidden="true"></i>
+          <blockquote>
+            <p>מצאנו דירה והיה לנו חודש וחצי עד החתימה, ומהפגישה הראשונה בבנק יצאנו בלי להבין מה רוצים מאיתנו. דניאל לקח את כל הטפסים, דיבר עם הבנקים במקומנו, וכל פעם שהיה משהו חדש קיבלנו ממנו הודעה. כשהגיעו ההצעות הוא ישב איתנו ערב שלם ועבר שורה שורה, עד שהבנו מה כל דבר אומר וכמה נשלם בכל חודש. חתמנו בזמן, ועברנו את כל התקופה הזאת בלי לריב על כסף אפילו פעם אחת.</p>
+          </blockquote>
+          <div class="review-footer">
+            <figure class="review-photo">
+              <div class="ph ph-avatar" aria-hidden="true"><i class="ti ti-user"></i></div>
+              <figcaption>תמונה להמחשה</figcaption>
+            </figure>
+            <p class="review-sign"><strong>מיכל ויונתן ש.</strong>, מודיעין · <span class="nowrap">המלצה להמחשה</span></p>
+          </div>
+        </li>
+        <li class="card review">
+          <i class="ti ti-quote review-mark" aria-hidden="true"></i>
+          <blockquote>
+            <p>אני בן אדם שבודק הכול לבד, ובאתי לדניאל עם הצעה שכבר השגתי מהבנק ועם אקסל מסודר. הייתי בטוח שהוא ינסה למכור לי ליווי. הוא עבר על ההצעה, אמר שהריבית בחלק הקבוע טובה ושאין לו מה לשפר בה, והראה לי שבאחד המסלולים אני נעול להרבה שנים ושיציאה באמצע עולה כסף. את זה שיניתי מול הבנק. בסוף לקחתי אותו לליווי מלא, כדי שיביא הצעות גם מבנקים אחרים. אני לא אחד שמשלם לבעלי מקצוע בקלות.</p>
+          </blockquote>
+          <div class="review-footer">
+            <figure class="review-photo">
+              <div class="ph ph-avatar" aria-hidden="true"><i class="ti ti-user"></i></div>
+              <figcaption>תמונה להמחשה</figcaption>
+            </figure>
+            <p class="review-sign"><strong>אלעד כ.</strong>, פתח תקווה · <span class="nowrap">המלצה להמחשה</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. FAQ -->
+    <section class="section wrap" aria-labelledby="faq-title">
+      <h2 id="faq-title">מה זוגות שואלים בשיחה הראשונה</h2>
+      <div class="faq">
+        <div class="faq-col">
+          <details open>
+            <summary>אפשר לקחת משכנתא בלי יועץ?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>אפשר, והרבה אנשים עושים את זה. אם יש לכם זמן לעבור בין הבנקים ואתם מבינים מה ההבדל בין המסלולים, יכול להיות שתסתדרו לבד. מה שקשה לדעת לבד זה אם ההצעה שקיבלתם טובה, כי אין לכם למה להשוות אותה. אז אם כבר יש לכם הצעה, תביאו אותה. בשיחה הראשונה, שהיא בחינם, אני בודק אותה ואומר לכם אם יש בה מה לשפר. לפעמים אין.</p>
+            </div>
+          </details>
+          <details>
+            <summary>כמה זה עולה?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>השיחה הראשונה לא עולה כלום, והיא לא מחייבת אתכם להמשיך. הליווי שאחריה בתשלום, במחיר קבוע שאני אומר לכם כבר בשיחה הראשונה, לפני שמתחילים. המחיר לא תלוי בגובה המשכנתא, אז אין לי סיבה לדחוף אתכם להלוואה גדולה יותר. יועץ עולה כמה אלפי שקלים, וזה הרבה כסף לזוג שחוסך לדירה. לכן עדיף שתשמעו את המחיר, תחשבו עליו בבית, ורק אז תחליטו.</p>
+            </div>
+          </details>
+          <details>
+            <summary>אתה מקבל כסף מהבנקים?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>לא. הכסף היחיד שאני מקבל הוא מכם, ולכן לא משנה לי באיזה בנק תיקחו את המשכנתא. קורה שההצעה הכי טובה מגיעה מהבנק שבו כבר יש לכם חשבון, ואז נשארים שם.</p>
+            </div>
+          </details>
+          <details>
+            <summary>יש לך רישיון? מה הרקע שלך?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>בישראל אין היום רישיון חובה ליועצי משכנתאות, וכל אחד יכול לקרוא לעצמו יועץ. יש הצעת חוק שתחייב מבחני הסמכה ורישום, והיא עדיין בחקיקה. עד שהיא תעבור, כדאי לשאול כל יועץ מה הרקע שלו. אצלי זה תואר ראשון בכלכלה ומנהל עסקים ושבע שנים כבנקאי משכנתאות. מ-2019 אני מלווה זוגות לבד, ועד היום ליוויתי יותר מ-300.</p>
+              <figure class="cert">
+                <div class="ph ph-cert" aria-hidden="true"><i class="ti ti-certificate"></i></div>
+                <figcaption>תמונה להמחשה</figcaption>
+              </figure>
+            </div>
+          </details>
+          <details>
+            <summary>הבנק שלנו מכיר אותנו. למה לא לסגור שם?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>הבנק שלכם באמת מכיר אתכם, וזה עוזר. אבל מי שיושב מולכם שם עובד בשביל הבנק, ומההצעה שלו לבד אי אפשר לדעת אם היא טובה. לכן אני מביא הצעות מעוד בנקים, ואז חוזרים לבנק שלכם עם ההצעות האלה ומבקשים שישפר.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-col">
+          <details>
+            <summary>מה קורה אם הבנק לא מאשר?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>את ההחלטה אם לאשר משכנתא מקבל הבנק, ואני לא יכול להבטיח מה הוא יחליט. מה שאפשר לעשות זה לבדוק מראש את הדברים שבגללם בנקים מסרבים, כמו הלוואות קיימות או צ'קים שחזרו, ולפנות לכמה בנקים, כי קורה שבנק אחד מסרב למה שבנק אחר מאשר. את הבדיקה הזאת עושים לפני שחותמים על חוזה, כי אחרי החתימה כבר התחייבתם למוכר.</p>
+            </div>
+          </details>
+          <details>
+            <summary>עוד לא מצאנו דירה. לא מוקדם מדי?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>לא מוקדם. כשעוד אין דירה ואין תאריך חתימה, אפשר לעבור על המספרים בלי לחץ ולדעת עד איזה מחיר לחפש. אפשר גם לבקש מהבנק אישור עקרוני עוד לפני שמצאתם דירה, ובשיחה אני מסביר איך עושים את זה.</p>
+            </div>
+          </details>
+          <details>
+            <summary>אין לנו הרבה הון עצמי. יש טעם לבדוק בכלל?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>יש טעם, כי בלי בדיקה אתם לא יודעים כמה חסר לכם, ואם חסר בכלל. לפי ההוראות של בנק ישראל, לדירה ראשונה הבנק מלווה עד 75% מהמחיר, ואת הרבע שנשאר צריך להביא מהבית. בשיחה אני בודק איתכם מה נחשב אצלכם הון עצמי, כולל קרן השתלמות ועזרה מההורים, ואיזה מחיר דירה יוצא מזה. יכול להיות שהתשובה תהיה שצריך לחסוך עוד שנה, וגם את זה עדיף לדעת עכשיו.</p>
+            </div>
+          </details>
+          <details>
+            <summary>מה צריך להכין לשיחה הראשונה?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>לא חייבים להכין כלום. לשיחה עצמה מספיק שתדעו בערך כמה חסכתם וכמה אתם מרוויחים. מי שכבר קיבל הצעה מהבנק מחזיק אותה מולו בזמן השיחה, ואנחנו עוברים עליה ביחד.</p>
+            </div>
+          </details>
+          <details>
+            <summary>זכינו בהגרלה של דירה בהנחה. מה עכשיו?<i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+            <div class="faq-answer">
+              <p>קודם כול, הזכייה עצמה היא עוד לא אישור למשכנתא. את המשכנתא מאשר הבנק, בנפרד, ולכן כדאי לבדוק אותה לפני שבוחרים דירה. בשיחה הראשונה אני עובר איתכם על ההון העצמי שנדרש מכם ועל ההחזר החודשי שיוצא, כדי שתגיעו לבחירת הדירה כשאתם יודעים מה אתם יכולים לקחת.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn-cta" href="#contact">להשאיר פרטים לשיחה בחינם</a>
+      </div>
+    </section>
+
+    <!-- 7. Contact form (demo: never sends or stores anything) -->
+    <section class="section wrap" id="contact" aria-labelledby="contact-title">
+      <div class="card contact">
+        <h2 id="contact-title" class="contact-title"><i class="ti ti-phone" aria-hidden="true"></i>תשאירו פרטים, ואני מתקשר אליכם</h2>
+        <figure class="contact-photo">
+          <div class="ph ph-portrait" aria-hidden="true"><i class="ti ti-user"></i></div>
+          <figcaption>תמונה להמחשה</figcaption>
+        </figure>
+        <p class="contact-body">תכתבו שם וטלפון, ואני מתקשר אליכם לקבוע שיחה. השיחה לוקחת חצי שעה בערך, היא בחינם, והיא לא מחייבת אתכם להמשיך איתי.</p>
+
+        <form class="contact-form" novalidate>
+          <div class="field">
+            <label for="name">שם</label>
+            <input id="name" class="text-input" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">טלפון</label>
+            <input id="phone" class="text-input" type="tel" autocomplete="tel">
+          </div>
+          <fieldset class="stage">
+            <legend>באיזה שלב אתם? <span class="optional">(לא חובה)</span></legend>
+            <div class="chips">
+              <input type="radio" id="stage-1" name="stage" class="chip-input"><label for="stage-1" class="chip">עוד לא התחלנו לחפש</label>
+              <input type="radio" id="stage-2" name="stage" class="chip-input"><label for="stage-2" class="chip">מחפשים דירה</label>
+              <input type="radio" id="stage-3" name="stage" class="chip-input"><label for="stage-3" class="chip">מצאנו דירה</label>
+              <input type="radio" id="stage-4" name="stage" class="chip-input"><label for="stage-4" class="chip">כבר יש לנו הצעה מהבנק</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-cta btn-block">להשאיר פרטים לשיחה בחינם</button>
+          <p class="demo-note"><i class="ti ti-info-circle" aria-hidden="true"></i>אתר הדגמה. הטופס לא שולח ולא שומר את הפרטים שלכם.</p>
+        </form>
+      </div>
+    </section>
   </main>
 
+  <!-- 8. Footer -->
   <footer class="footer">
     <p>אתר הדגמה. הדמויות פיקטיביות, וכך גם הרקע והמספרים של דניאל.</p>
   </footer>
