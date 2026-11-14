@@ -3,17 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>אשכנזי משכנתאות | דניאל אשכנזי, יועץ משכנתאות</title>
-  <meta name="description" content="ליווי במשכנתא לזוגות לפני דירה ראשונה.">
+  <title>אשכנזי משכנתאות | איזו דירה אתם יכולים לקנות</title>
+  <meta name="description" content="מחשבון שמראה איזו דירה אתם יכולים לקנות לפי מה שחסכתם, מה שאתם מרוויחים וההחזר החודשי שנוח לכם. דניאל אשכנזי, לשעבר בנקאי משכנתאות, עובר איתכם על התוצאה בשיחה ראשונה בחינם.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Rubik:wght@500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="topbar">
+    <div class="wrap">
+      <span class="logo" aria-hidden="true">ד"א</span>
+      <span class="brand">אשכנזי משכנתאות</span>
+    </div>
+  </header>
+
   <main>
-    <h1>אשכנזי משכנתאות</h1>
-    <p>הדף בבנייה. אם אתם קוראים את השורה הזאת בטלפון, מימין לשמאל, השלד עובד.</p>
+    <section class="hero wrap">
+      <div class="hero-text">
+        <h1>אנחנו בכלל יכולים לקנות דירה?</h1>
+        <p class="lead">זאת השאלה שרוב הזוגות שמגיעים אליי מתחילים ממנה. אפשר לענות עליה כבר עכשיו, עוד לפני שראיתם דירה אחת. תכתבו במחשבון כמה חסכתם, כמה אתם מרוויחים וכמה נוח לכם להחזיר בחודש, ותקבלו טווח מחירים. המחשבון לא מחליף ייעוץ, אבל הוא נותן לכם מספר להתחיל ממנו. כשיהיה לכם מספר, תשאירו פרטים ונעבור עליו ביחד. על השיחה הראשונה אני לא לוקח כסף.</p>
+        <div class="person">
+          <div class="photo" aria-hidden="true">ד"א</div>
+          <div>
+            <p class="person-name">דניאל אשכנזי, יועץ משכנתאות</p>
+            <p class="person-meta">לשעבר בנקאי משכנתאות · יותר מ-300 זוגות מאז 2019</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="card calc" novalidate>
+        <h2>תכתבו שלושה מספרים ותקבלו טווח מחירים</h2>
+
+        <div class="field">
+          <label for="equity"><i class="ti ti-wallet" aria-hidden="true"></i>הון עצמי</label>
+          <div class="input-wrap">
+            <input id="equity" type="text" inputmode="numeric" autocomplete="off" aria-describedby="equity-help">
+            <span class="currency" aria-hidden="true">₪</span>
+          </div>
+          <p class="help" id="equity-help">ההון העצמי שלכם. כולל כסף שההורים נותנים.</p>
+        </div>
+
+        <div class="field">
+          <label for="income"><i class="ti ti-coins" aria-hidden="true"></i>כמה אתם מרוויחים ביחד בחודש</label>
+          <div class="input-wrap">
+            <input id="income" type="text" inputmode="numeric" autocomplete="off" aria-describedby="income-help">
+            <span class="currency" aria-hidden="true">₪</span>
+          </div>
+          <p class="help" id="income-help">נטו, מה שנכנס לחשבון.</p>
+        </div>
+
+        <div class="field">
+          <label for="payment"><i class="ti ti-calendar" aria-hidden="true"></i>כמה נוח לכם להחזיר בחודש</label>
+          <div class="input-wrap">
+            <input id="payment" type="text" inputmode="numeric" autocomplete="off" aria-describedby="payment-help">
+            <span class="currency" aria-hidden="true">₪</span>
+          </div>
+          <p class="help" id="payment-help">הרבה זוגות מתחילים מהסכום שהם משלמים היום על שכירות.</p>
+        </div>
+
+        <button type="button" class="btn-calc">לראות טווח מחירים</button>
+      </form>
+    </section>
   </main>
-  <footer>
-    <p>אתר הדגמה, הדמויות פיקטיביות</p>
+
+  <footer class="footer">
+    <p>אתר הדגמה. הדמויות פיקטיביות, וכך גם הרקע והמספרים של דניאל.</p>
   </footer>
 </body>
 </html>
