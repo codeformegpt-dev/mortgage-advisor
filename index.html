@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <form class="card calc" novalidate>
+      <form class="card calc" id="calc" novalidate>
         <h2>תכתבו שלושה מספרים ותקבלו טווח מחירים</h2>
 
         <div class="field">
@@ -45,6 +45,7 @@
             <span class="currency" aria-hidden="true">₪</span>
           </div>
           <p class="help" id="equity-help">ההון העצמי שלכם. כולל כסף שההורים נותנים.</p>
+          <p class="field-msg" id="equity-msg" hidden><i class="ti ti-info-circle" aria-hidden="true"></i><span></span></p>
         </div>
 
         <div class="field">
@@ -54,6 +55,7 @@
             <span class="currency" aria-hidden="true">₪</span>
           </div>
           <p class="help" id="income-help">נטו, מה שנכנס לחשבון.</p>
+          <p class="field-msg" id="income-msg" hidden><i class="ti ti-info-circle" aria-hidden="true"></i><span></span></p>
         </div>
 
         <div class="field">
@@ -63,13 +65,43 @@
             <span class="currency" aria-hidden="true">₪</span>
           </div>
           <p class="help" id="payment-help">הרבה זוגות מתחילים מהסכום שהם משלמים היום על שכירות.</p>
+          <p class="field-msg" id="payment-msg" hidden><i class="ti ti-info-circle" aria-hidden="true"></i><span></span></p>
         </div>
 
-        <button type="button" class="btn-calc">לראות טווח מחירים</button>
+        <button type="submit" class="btn-calc">לראות טווח מחירים</button>
       </form>
+
+      <!-- Result panel (stage 7). Mobile: joins the calculator card. Desktop: full width under both columns. -->
+      <section class="card result" id="result" aria-label="תוצאת המחשבון" hidden>
+        <div class="result-main">
+          <!-- Case A: a price range -->
+          <div class="result-range">
+            <p class="result-head">לפי מה שכתבתם, אתם יכולים לחפש דירה במחיר של <span class="num" data-out="low"></span> עד <span class="num" data-out="high"></span> ש"ח.</p>
+            <div class="range-bar" aria-hidden="true">
+              <div class="range-track"></div>
+              <div class="range-labels"><span data-out="low-label"></span><span data-out="high-label"></span></div>
+            </div>
+            <p class="result-cap" hidden><i class="ti ti-info-circle" aria-hidden="true"></i><span>ההחזר שכתבתם גבוה מ-40% מההכנסה שלכם. מעל הרף הזה בנקים מתקשים לאשר, אז חישבתי לפי החזר של <span data-out="cap-payment"></span> ש"ח בחודש.</span></p>
+            <p class="result-detail">המשכנתא שתיקחו היא <span data-out="loan-low"></span> עד <span data-out="loan-high"></span> ש"ח, עם החזר של <span data-out="payment"></span> ש"ח בחודש במשך 30 שנה. הטווח תלוי בריבית: המספר הגבוה מחושב לפי הריבית הממוצעת שבנק ישראל פרסם לאחרונה, והנמוך לפי ריבית גבוהה ממנה באחוז אחד.</p>
+          </div>
+
+          <!-- Case B: the equity is what limits the price -->
+          <div class="result-equity" hidden>
+            <p class="result-head">לפי מה שכתבתם, אתם יכולים לחפש דירה במחיר של עד <span class="num" data-out="max"></span> ש"ח.</p>
+            <p class="result-detail">אצלכם מה שקובע את המחיר הוא ההון העצמי. לדירה ראשונה הבנק מלווה עד 75% מהמחיר, ואת הרבע שנשאר מביאים מהבית. ההחזר על משכנתא כזאת יוצא בערך <span data-out="eq-payment"></span> ש"ח בחודש, פחות ממה שכתבתם.</p>
+          </div>
+
+          <p class="result-fixed">הערכה להמחשה בלבד, אינה ייעוץ</p>
+          <p class="result-source">הריבית בחישוב: ממוצע בנק ישראל למשכנתאות בריבית קבועה לא צמודה לתקופה של יותר מ-25 שנה, ספטמבר 2026.</p>
+        </div>
+        <div class="result-cta">
+          <a class="btn-cta" href="#contact">להשאיר פרטים לשיחה בחינם</a>
+        </div>
+      </section>
+      <p class="sr-only" id="result-live" aria-live="polite"></p>
     </section>
 
-    <!-- Bridge sentence (loop). The result panel and CTA (1) go above it in stage 7. -->
+    <!-- Bridge sentence (loop), always visible, right under the result panel -->
     <div class="bridge wrap">
       <p>יש שלושה דברים שהמחשבון לא יודע עליכם, והבנק ישאל על כולם.</p>
       <i class="ti ti-arrow-down" aria-hidden="true"></i>
