@@ -429,6 +429,38 @@ button { font: inherit; color: inherit; }
   .has-stage .bank-item .h3 { font-size: 28px; }
 }
 
+/* ----- החפצים (A7, נוסף לבקשת דוד ב-16.11.2026) -----
+   בטלפון ובמחשב בלי הבמה: תמונה מעל כל פריט, במקום האייקון.
+   במחשב עם הבמה: התמונה בבמה, והמספר הענק מעליה ונכנס מאחוריה כדי לא לכסות את החפץ.
+   החפצים הם לא אנשים, ולכן בלי "תמונה להמחשה" (rules.md). */
+.bank-media {
+  margin: 0 0 20px; aspect-ratio: 1408 / 768; border-radius: var(--r-media);
+  overflow: hidden; background: var(--night);
+}
+.bank-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bank-top .ic { display: none; }
+@media (min-width: 900px) {
+  .bank-media { max-width: 560px; }
+  .has-stage .bank-media { display: none; }
+  .has-stage .bank-top .ic { display: block; }
+  .has-stage .stage-num {
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+    font-size: 1rem; background: none; -webkit-background-clip: border-box; background-clip: border-box; color: inherit;
+  }
+  .stage-digit {
+    position: relative; z-index: 0; margin-inline-start: 8px; margin-bottom: -0.1em;
+    font-family: var(--f-head); font-weight: 800; font-size: clamp(170px, 15vw, 240px); line-height: .8;
+    background: linear-gradient(to bottom, var(--green), var(--green-deep));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .stage-frame {
+    position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 3 / 2;
+    border-radius: var(--r-media); overflow: hidden; background: var(--night);
+  }
+  .stage-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .has-stage .bank-stage::before { inset: -18%; }
+}
+
 /* =============================================================================
    4. איך זה עובד (5.5): הציר המואר
    ============================================================================= */
