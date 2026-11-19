@@ -1,6 +1,6 @@
 // =============================================================================
 // Version A ("light in the window"): motion, photo slots, form, certificates.
-// The calculator itself lives in ../assets/js/calc.js and is not touched here.
+// The calculator itself lives in assets/js/calc.js and is not touched here.
 // Spec: site-map-3-redesign-spec, sections 5, 7.1, 8 and 9.4.
 // =============================================================================
 (function () {
